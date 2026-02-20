@@ -11,7 +11,7 @@
 <style>
 body {
     margin:0;
-    font-family:Arial;
+    font-family:Arial, sans-serif;
     background:black;
     color:white;
     text-align:center;
@@ -22,6 +22,18 @@ body {
 input, button {
     padding:10px;
     margin:5px;
+    width:90%;
+    max-width:300px;
+    border-radius:6px;
+    border:1px solid white;
+    background:transparent;
+    color:white;
+}
+
+button:hover {
+    background:white;
+    color:black;
+    cursor:pointer;
 }
 
 .container {
@@ -33,13 +45,19 @@ input, button {
     padding:20px;
     margin:20px auto;
     max-width:400px;
+    border-radius:8px;
+}
+
+@media (max-width:480px){
+    input, button { width: 95%; }
 }
 </style>
+
 </head>
 <body>
 
 <div id="auth" class="container">
-    <h2>DZ Wallet</h2>
+    <h2>DZ Wallet 🔐</h2>
     <input type="password" id="pin" placeholder="PIN (4 chiffres)">
     <button id="login">Entrer</button>
     <p id="authMsg"></p>
