@@ -10,33 +10,60 @@
 
 <style>
 body {
+    margin:0;
+    font-family:Arial;
     background:black;
     color:white;
-    font-family:Arial;
     text-align:center;
-    padding-top:100px;
 }
+
+.hidden { display:none; }
+
 input, button {
     padding:10px;
     margin:5px;
 }
-.hidden { display:none; }
-</style>
 
+.container {
+    padding:20px;
+}
+
+.card {
+    border:1px solid white;
+    padding:20px;
+    margin:20px auto;
+    max-width:400px;
+}
+</style>
 </head>
 <body>
 
-<div id="auth">
+<div id="auth" class="container">
     <h2>DZ Wallet</h2>
     <input type="password" id="pin" placeholder="PIN (4 chiffres)">
     <button id="login">Entrer</button>
-    <p id="msg"></p>
+    <p id="authMsg"></p>
 </div>
 
-<div id="wallet" class="hidden">
-    <h3>Adresse :</h3>
-    <p id="address"></p>
+<div id="wallet" class="container hidden">
+
+    <div class="card">
+        <h3>Adresse</h3>
+        <p id="address"></p>
+        <h3>Balance DZ</h3>
+        <p id="balance">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Envoyer DZ</h3>
+        <input type="text" id="recipient" placeholder="Adresse destinataire">
+        <input type="number" id="amount" placeholder="Montant">
+        <button id="sendBtn">Envoyer</button>
+        <p id="txMsg"></p>
+    </div>
+
     <button id="logout">Lock</button>
+
 </div>
 
 </body>
