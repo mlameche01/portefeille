@@ -1,0 +1,147 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* UTILS */
+.hidden {
+    display: none;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* AUTH SCREEN */
+#authScreen h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+input {
+    width: 280px;
+    padding: 12px;
+    margin: 10px 0;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #888;
+}
+
+/* BUTTON STYLE */
+button {
+    padding: 12px 24px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* WALLET LAYOUT */
+#walletScreen {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h3 {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* CARD */
+.card {
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* TEXT */
+.card p {
+    margin: 6px 0;
+    word-break: break-word;
+}
+
+#balance {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* SEND SECTION */
+.send-section h4 {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* TRANSACTION MESSAGE */
+#txMsg,
+#authMsg {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+
+    input {
+        width: 90%;
+    }
+
+    #walletScreen {
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
