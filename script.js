@@ -6,7 +6,7 @@ const TOKEN_ABI = [
   "function decimals() view returns (uint8)"
 ];
 
-const RPC_URL = "https://rpc.ankr.com/polygon";
+const RPC_URL = "https://rpc-mainnet.maticvigil.com";
 let provider = new ethers.JsonRpcProvider(RPC_URL);
 let wallet;
 let tokenContract;
