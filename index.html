@@ -3,43 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DZ Denarius Wallet</title>
+<title>DZ Wallet</title>
 
-<script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.min.js"></script>
-<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.umd.min.js"></script>
 <script defer src="script.js"></script>
+
+<style>
+body {
+    background:black;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    padding-top:100px;
+}
+input, button {
+    padding:10px;
+    margin:5px;
+}
+.hidden { display:none; }
+</style>
+
 </head>
 <body>
 
-<div id="authScreen" class="center">
-    <h2>DZ Wallet 🔐</h2>
-    <input type="password" id="pin" placeholder="Créer / Entrer PIN">
-    <button id="unlockBtn">Continuer</button>
-    <p id="authMsg"></p>
+<div id="auth">
+    <h2>DZ Wallet</h2>
+    <input type="password" id="pin" placeholder="PIN (4 chiffres)">
+    <button id="login">Entrer</button>
+    <p id="msg"></p>
 </div>
 
-<div id="walletScreen" class="hidden">
-
-    <header>
-        <h3>DZ Denarius Wallet</h3>
-        <button id="lockBtn">Lock</button>
-    </header>
-
-    <div class="card">
-        <p><strong>Adresse :</strong></p>
-        <p id="address"></p>
-        <p><strong>Balance DZ :</strong></p>
-        <p id="balance">0</p>
-    </div>
-
-    <div class="card">
-        <h4>Envoyer DZ</h4>
-        <input type="text" id="recipient" placeholder="Adresse destinataire">
-        <input type="number" id="amount" placeholder="Montant">
-        <button id="sendBtn">Envoyer</button>
-        <p id="txMsg"></p>
-    </div>
-
+<div id="wallet" class="hidden">
+    <h3>Adresse :</h3>
+    <p id="address"></p>
+    <button id="logout">Lock</button>
 </div>
 
 </body>
